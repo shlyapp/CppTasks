@@ -13,7 +13,7 @@ const double E = 2.71828;
 // формула для вычисления y
 float F(float a, float b, float x)
 {
-    return (pow(a, 2) + b * pow(x, 1 / 3)) / (3.56 + sin(a + b) + pow(E, 2));
+    return (pow(a, 2) + (b * pow(abs(x), 1 / 3.0))) / (3.56 + sin(a + b) + pow(E, x));
 }
 
 int main()
@@ -59,5 +59,5 @@ int main()
     }
 
     cout << "Максимальное значение y: " << max << "\n";
-    cout << "Среднее значение среди положительных элементов y: " << summa / counter;
+    cout << "Среднее значение среди положительных элементов y: " << summa / counter << endl;
 }
